@@ -23,14 +23,9 @@
               "src/assets"
             ],
             "styles": [
-              "node_modules/bootstrap/dist/css/bootstrap.min.css", 
-              "src/styles.css",
-              "node_modules/ngx-bootstrap/datepicker/bs-datepicker.css"
+              "src/styles.css"
             ],
-            "scripts": [
-              "node_modules/jquery/dist/jquery.min.js",
-              "node_modules/bootstrap/dist/js/bootstrap.min.js"
-            ]
+            "scripts": []
           },
           "configurations": {
             "production": {
@@ -83,7 +78,6 @@
             "assets": [
               "src/favicon.ico",
               "src/assets"
-              
             ]
           }
         },
