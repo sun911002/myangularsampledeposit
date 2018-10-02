@@ -1,0 +1,88 @@
+
+<div class="container">
+  <div class="row">
+    <div class="col-lg-4 col-md-6">
+      <span>RS</span><br><h4>{{Damount}}</h4>
+    </div>
+    <div class="col-lg-8 col-md-6">
+         <div class="row">
+                 <div class="form-group  col-md-6">
+                      <label for="usr">Amount:</label>
+                      <input type="number"  class="form-control" name="amount" [(ngModel)]="amount" required>
+                 </div>
+                 <div class="form-group col-md-6">
+                      <label for="pwd">Reason:</label>
+                      <input type="text" class="form-control" name="reason" [(ngModel)]="reason" required>
+                 </div>
+                 <button type="button" class="btn btn-primary" style="margin:10px"(click)="deposit()">deposit</button>
+                 <button type="button" class="btn btn-primary" (click)="credit()">Debit</button>
+                 
+            </div>
+      </div>
+     </div>
+  </div>
+  <ul class="nav nav-tabs">
+   <li style="margin:2px;"><button type="button" class="btn btn-primary" (click)="merge()">All</button></li>
+   <li style="margin:2px;"><button type="button" class="btn btn-primary" (click)="spend()">spended</button></li>
+   <li style="margin:2px;"><button type="button" class="btn btn-primary" (click)="credit1()">Deposited</button></li>
+  </ul>
+
+  
+    
+     <div *ngIf="all">
+            <div *ngFor="let item of marr" class="box">
+              <p><span>Rs</span>{{item.amount}}</p>
+              <p>{{item.reason}}</p>
+              <p>{{item.date |date:'shortDate'}}</p>
+            </div>
+      </div>
+      
+      <div *ngIf="spe">
+          <div *ngFor="let item of sarr" class="box">
+            <p><span>Rs</span>{{item.amount}}</p>
+            <p>{{item.reason}}</p>
+            <p>{{item.date |date:'shortDate'}}</p>
+          </div>
+    </div>
+    <div *ngIf="cre">
+        <div *ngFor="let item of dearr" class="box">
+          <p><span>Rs</span>{{item.amount}}</p>
+          <p>{{item.reason}}</p>
+          <p>{{item.date |date:'shortDate'}}</p>
+        </div>
+  </div>
+
+        
+
+
+
+
+
+
+
+  <!---
+      <form  #f="ngForm" (ngSubmit)="onsubmit(f)"  class="form-inline">
+
+        <div class="form-group  col-md-6">
+          <label for="usr">Amount:</label>
+          <input type="number" class="form-control" name="amount" [(ngModel)]="amount">
+        </div>
+        <div class="form-group col-md-6">
+          <label for="pwd">Reason:</label>
+          <input type="text" class="form-control" name="reason" [(ngModel)]="reason">
+        </div>
+        <button type="submit" class="btn btn-primary" style="margin:10px">depit</button>
+        <button type="submit" class="btn btn-primary">credit</button>
+      </form>
+    -->
+
+
+    <!--- <input type="text" #firstNameInput>
+     <input type="text" #lastNameInput>
+
+     
+      </div>
+      <button (click)="show(lastNameInput,firstNameInput)">Show</button>
+  </div>
+ </div>
+</div>--->

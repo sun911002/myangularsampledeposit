@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+<head>
+<style>
+</style>
+<body>
+<p id="paragraph"></p>
+</body>
+<script>
+
+function test(a,b)
+{
+this.a=a;
+this.b=b;
+}
+
+test.prototype.add=function(){
+var c=this.a+this.b;	
+//return c;
+document.getElementById('paragraph').innerHTML=c;
+}
+
+
+function display(){
+return this.a;
+}
+
+test.prototype=display;
+
+//var a=new  
+var addition=new add(4,3);
+//console.log(a.add());
+console.log(a.display());
+
+
+
+
+
+</script>
+</html>

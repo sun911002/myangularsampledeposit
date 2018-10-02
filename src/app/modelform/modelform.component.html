@@ -1,0 +1,36 @@
+<form [formGroup]="form" (ngSubmit)="submit(form.value)">
+
+      <div class="form-group">
+        <label>Name</label>
+        <input type="text" name="decimal"
+         class="form-control" formControlName="decimal">
+      </div>
+  
+      <div class="form-group">
+        <label>RollNo</label>
+        <input type="text" name="binary"
+               class="form-control"  formControlName="binary" >
+      </div>
+      <div class="form-group">
+        <label>subject</label>
+        <input type="text" name="octal"
+               class="form-control"  formControlName="octal" >
+      </div>
+      <div>  
+        <input type="submit" class="btn btn-primary">
+      </div>
+    </form>
+  
+  <div *ngIf="show">
+   <!--<div *ngFor="let key of objectKeys(obj)">-->
+      
+      <!--<h1>{{key+':'+obj[key]}}</h1>-->
+     <!-- <div *ngFor="let key of arrform">
+          <h1>{{key.name}}</h1>-->
+
+          <app-modelchild [childdata]="obj"></app-modelchild>
+   
+  </div>
+  
+   
+   

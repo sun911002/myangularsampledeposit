@@ -1,0 +1,11 @@
+.imgwidth{
+width:250px;
+height:250px;
+}
+.vertical-align{
+    display: flex;
+    align-items: center;
+}
+.pointer{
+    cursor: pointer;
+}

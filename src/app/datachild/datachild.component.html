@@ -1,0 +1,12 @@
+<h1>child component</h1>
+<ul *ngFor="let list of childdata">
+ <li> {{list}}</li>
+</ul>
+<h1>child data emits</h1><br>
+<!--<input type="text" name="data" ([ngModel])="data">-->
+<input type="text" name="data" [(ngModel)]="data">
+<button type="button" class="btn btn-primary" (click)="sendtoparent()">sendtoparent</button>
+<button type="button" class="btn btn-primary" (click)="get()">get</button>
+
+
+{{message}}
