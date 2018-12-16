@@ -1,0 +1,27 @@
+<div class="container jumbotron">
+
+     
+  <form #login="ngForm" (ngSubmit)="submit(login.value)"> 
+  <div class="row">
+     <div class="col-md-6 col-md-offset-3">
+     <label for="username">username</label>
+     <input type="text" class="form-control" name="username"placeholeder="Enter the user" [(ngModel)]="username">
+    </div>
+  </div>
+  <div class="row">
+      <div class="col-md-6 col-md-offset-3">
+      <label for="password">password</label>
+      <input type="text" class="form-control"  name="password"placeholeder="Enter the password" [(ngModel)]="password">
+     </div>
+ </div>
+ <div class="row">
+    <div class="col-md-6 col-md-offset-3">
+    <input type="submit"  value="signin" class="btn btn-primary">
+    </div>
+ </div>
+    
+  </form>
+  
+</div>
+<div class="container" *ngIf="error1">
+<div class="well well-primary"><span class="text-primary text-center">{{msg}}</span></div></div>

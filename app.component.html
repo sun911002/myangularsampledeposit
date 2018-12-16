@@ -1,0 +1,14 @@
+<!--The content below is only a placeholder and can be replaced.-->
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      
+      <ul class="nav navbar-nav navbar-right">
+        <li *ngIf="!user.isLogged()"><a routerLink="login">login</a></li>
+        <li *ngIf="!user.isLogged()"><a routerLink="Register">Register</a></li>
+        <li *ngIf="user.isLogged()"><a routerLink="Home">Home</a></li>
+        <li *ngIf="user.isLogged()"><a (click)="logout()">logout</a></li>
+      </ul>
+    </div>
+  </nav>
+  <router-outlet></router-outlet>
+
