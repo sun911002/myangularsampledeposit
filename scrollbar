@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>Customize the Browser's Scrollbar with CSS</title>
+        <link type="text/css" rel="stylesheet" href="style.css">
+    </head>
+    <body>
+       
+        <div class="scrollbar" id="bar">
+            <div class="force-overflow">
+                <p>Lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum </p>
+                <p>Lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum </p>                        
+            </div>
+        </div> 
+    </body>
+</html>
+
+***********************css**********************/
+.scrollbar {
+    background-color: #F5F5F5;
+    float: left;
+    height: 300px;
+    margin-bottom: 25px;
+    margin-left: 250px;
+    margin-top: 40px;
+    width: 300px;
+    border:2px solid #666;
+    overflow-y: scroll;
+}
+
+#bar{
+	/*IE browser*/
+	 scrollbar-face-color:#F5F5F5;
+	scrollbar-arrow-color:#000000;
+	scrollbar-track-color:#F5F5F5;
+	
+	scrollbar-highlight-color:#F5F5F5;
+	scrollbar-3dlight-color:#808080;
+	scrollbar-darkshadow-Color:#202020;
+
+	/*mozilla firebox*/
+	scrollbar-color: rebeccapurple green;
+    scrollbar-width: thin;
+}
+
+
+.force-overflow {
+    min-height: 450px;
+    /*mozil firebox*/
+}
+
+
+
+
+#bar::-webkit-scrollbar {
+    width: 4px;
+    background-color: #F5F5F5;
+}
+#bar::-webkit-scrollbar-thumb {
+    background-color:#000000;
+    border-radius: 30px;
+}
+
+#bar::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    background-color: #F5F5F5;
+}
+
+
+
+
